@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="jpa-exam-j2ee:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="jpa-exam-j2ee.war">
+      <element id="artifact" artifact-name="jpa-exam-j2ee:war exploded" />
+    </root>
+  </artifact>
+</component>

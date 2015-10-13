@@ -9,10 +9,6 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <properties>
             <property name="packagesToScan" value="ro.tekin.jpa.entity"/>
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
-            <property name="javax.persistence.jdbc.user" value="admin"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
 
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 

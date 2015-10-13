@@ -1,6 +1,7 @@
 package ro.tekin.jpa.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ro.tekin.jpa.entity.*;
 
 import javax.annotation.PostConstruct;
@@ -13,19 +14,18 @@ import java.util.*;
  * Created by tekin on 10/12/2015.
  */
 @Service
-public class MyServiceImpl implements MyService{
-    EntityManager em;
-
-    @PersistenceContext(unitName = "exam")
-    public void setEm(EntityManager em) {
-        this.em = em;
-    }
+@Transactional
+public class MyServiceImpl implements MyService {
+    @PersistenceContext
+    private EntityManager em;
 
     @PostConstruct
     public void start() {
+        System.out.println("Gata service-ul");
 //        method1();
 //        method2();
     }
+
     public void method2() {
         List<Employee> employees = em.createQuery("select e from Employee e", Employee.class).getResultList();
         List<Department> departments = em.createQuery("select e from Department e", Department.class).getResultList();
